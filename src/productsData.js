@@ -3,7 +3,7 @@ export default [
     id: "1",
     name: "iPhone 14 Pro",
     description: "Llega a tus manos una forma mágica de utilizar el iPhone, combinada con prestaciones de seguridad pensadas para salvar vidas.",
-    img: "https://www.apple.com/euro/iphone-14-pro/a/screens_alt/images/overview/colors/gallery_deep_purple__eog5f5067tw2_large.jpg",
+    img: "https://www.pngmart.com/files/22/iPhone-14-PNG-Transparent.png",
     price: 1000
   },
   {
@@ -11,7 +11,7 @@ export default [
     name: "iPhone 14",
     description:
       "Nuestra mejor batería hasta hoy. Y hasta mañana.",
-    img: "https://www.apple.com/es/iphone-14/images/overview/hero/hero_iphone_14_plus__fra3gmuj0aum_large.jpg",
+    img: "https://www.pngall.com/wp-content/uploads/13/iPhone-14-PNG.png",
     price: 900
   },
   {
@@ -19,7 +19,7 @@ export default [
     name: "iPhone 13",
     description:
       "Tan increíble como simple.",
-    img: "https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/iphone-13-model-unselect-gallery-1-202207?wid=2560&hei=1440&fmt=p-jpg&qlt=80&.v=1654893619853",
+    img: "https://waiphone.com/storage/2021/11/iphone-13-pro-max-oro.png",
     price: 600
   },
   {
@@ -34,15 +34,15 @@ export default [
     name: "HUAWEI Mate Xs 2",
     description:
       "Ultraligero, ultraplano, muy resistente",
-    img: "https://consumer.huawei.com/content/dam/huawei-cbg-site/common/mkt/pdp/phones/mate-xs2/img/kv/kv@2x.webp",
+    img: "https://img01.huaweifile.com/sg/ms/ph/pms/uomcdn/PH_HW_B2B2C/pms/202205/gbom/6941487266791/428_428_9FFA9FF15FD3546B1380A91AF7FEAF5Fmp.png",
     price: 200
   },
   {
     id: "6",
-    name: "iPhone 13",
+    name: "Samsung Galaxy",
     description:
-      "Tan increíble como simple.",
-    img: "https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/iphone-13-model-unselect-gallery-1-202207?wid=2560&hei=1440&fmt=p-jpg&qlt=80&.v=1654893619853",
+      "Nuevo Samsung Galaxy",
+    img: "https://images.samsung.com/is/image/samsung/p6pim/es/sm-a536blbneub/gallery/es-galaxy-a53-5g-a536-sm-a536blbneub-thumb-531775996?$320_320_PNG$",
     price: 300
   },
   {

@@ -20,7 +20,6 @@ const Products = () => {
   return (
     <>
       <div className="productsHeader">
-        <h1 className="col-10"></h1>
         <p className="searchbar col-2">Search...</p>
       </div>
       <div className="products">
