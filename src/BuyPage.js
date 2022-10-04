@@ -20,7 +20,7 @@ function BuyPage() {
                     <p>Owned!</p>
                 </div>
                 <div className="actions">
-                    <button className="bought">Congratulations!</button>
+                    <div className="bought">Congratulations!</div>
                     <Link to="/"><button>Continue shopping</button></Link>
                 </div>
             </div>

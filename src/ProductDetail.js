@@ -16,11 +16,12 @@ function ProductDetail() {
                 <div className="description">
                     <h1>{thisProduct.name}</h1>
                     <h3>Description</h3>
-                    <p>{thisProduct.description}</p>
+                    <p>Brand: {thisProduct.brand}</p>
                     <p>Price: ${thisProduct.price}</p>
                 </div>
                 <div className="actions">
-                    <Link to={`/buyPage/${thisProduct.id}`}><button>Buy</button></Link>
+                    
+                    <Link to={`/buyPage/${thisProduct.id}`}><button className="buy">Buy</button></Link>
                     <Link to="/"><button>Continue shopping</button></Link>
                 </div>
             </div>

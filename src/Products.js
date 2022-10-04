@@ -5,14 +5,17 @@ import { Link } from "react-router-dom";
 const Products = () => {
   const products = productsData.map(product => {
     return (
-      <div key={product.id} className="productCard .col-3">
-        <h3>
-          <Link to={`/products/${product.id}`}>{product.name}</Link>
-        </h3>
-          <Link to={`/products/${product.id}`}>
-            <img src={product.img} alt=""/>
-          </Link>
-        <p>Price: ${product.price}</p>
+      <div className="product" key={product.id}>
+        <Link to={`/products/${product.id}`}>
+          <div  className="productCard .col-3">
+              <h3>
+                {product.name}
+              </h3>
+              <img src={product.img} alt=""/>
+            
+            <p>Price: ${product.price}</p>
+          </div>
+        </Link>
       </div>
     );
   });
@@ -20,7 +23,7 @@ const Products = () => {
   return (
     <>
       <div className="productsHeader">
-        <p className="searchbar col-2">Search...</p>
+        <input className="searchbar col-2"/>
       </div>
       <div className="products">
         {products}
