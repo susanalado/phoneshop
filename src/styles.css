@@ -1,0 +1,89 @@
+body {
+  background-color: #5c5c5c;
+  margin: 0;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+}
+
+nav a {
+  margin: 1rem;
+  color: white;
+  text-decoration: none;
+}
+
+nav {
+  padding: 30px;
+  font-size: 30px;
+  background-color: #292929;
+  width: 100vw;
+}
+
+.productsHeader {
+  display: flex;
+  margin-left: 30px;
+}
+
+.productCard {
+  padding: 30px;
+  float: left;
+  max-width: 25vw;
+}
+
+.productCard a {
+  color: white;
+  text-decoration: none;
+}
+
+.products img {
+  width: 300px;
+  overflow: auto;
+  height: 300px;
+  overflow: hidden;
+}
+
+.searchbar {
+  margin-top: 25px;
+}
+
+.details {
+  padding: 30px;
+  display: flex;
+}
+
+.miniature img{
+  width: 300px;
+  max-height: 500px;
+}
+
+.description {
+  padding: 30px;
+}
+
+.actions {
+  padding: 30px;
+}
+
+@media (max-width:1080px){
+  .productCard {
+    max-width: 40vw;
+  }
+}
+
+@media (max-width: 720px){
+  .productCard {
+    max-width: 100vw;
+  }
+}
+
+/* Responsive columns */
+.col-1 {width: 8.33%;}
+.col-2 {width: 16.66%;}
+.col-3 {width: 25%;}
+.col-4 {width: 33.33%;}
+.col-5 {width: 41.66%;}
+.col-6 {width: 50%;}
+.col-7 {width: 58.33%;}
+.col-8 {width: 66.66%;}
+.col-9 {width: 75%;}
+.col-10 {width: 83.33%;}
+.col-11 {width: 91.66%;}
+.col-12 {width: 100%;}
