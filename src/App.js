@@ -1,29 +1,22 @@
 import React from "react";
-import { Link, Route, Switch } from "react-router-dom";
-import Products from "./Products";
-import ProductDetail from "./ProductDetail";
-import BuyPage from "./BuyPage";
+import Navbar from "./Navbar";
 
-function App() {
+function App (){    
+  var cartCount = 0;
+  const  [cart, setCart] = React.useState([])
+  const addToCart = () => {
+    cartCount++;
+  }
+
   return (
     <div>
-      <nav>
-        <Link to="/">Phone Shop</Link>
-      </nav>
-
-      <Switch>
-        <Route exact path="/">
-          <Products />
-        </Route>
-        <Route path="/products/:productId">
-          <ProductDetail />
-        </Route>
-        <Route path="/buyPage/:productId">
-          <BuyPage />
-        </Route>
-      </Switch>
+      <Navbar
+      cart={cart}
+      addToCart={addToCart}/>
+        <div className="cart-value">{cartCount}</div>
     </div>
-  );
+  )
 }
+
 
 export default App;

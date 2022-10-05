@@ -7,15 +7,47 @@ body {
 
 nav a {
   margin: 1rem;
+  font-size: 25px;
   color: black;
   text-decoration: none;
 }
 
+.header{
+  display: flex;
+  background-color: #b29ddb;
+}
+
 nav {
   padding: 30px;
-  font-size: 30px;
-  background-color: #b29ddb;
   width: 100vw;
+  display: flex;
+}
+
+.cart {
+  padding: 30px;
+}
+
+.cart-icon {
+  position: relative;
+  float: right;
+  margin-right: 20px;
+  cursor: pointer;
+}
+
+.cart-value {
+  position: absolute;
+  right: 0;
+  top: 30px;
+  width: 50px;
+}
+
+.breadcrumbs {
+  padding: 16px;
+}
+
+.breadcrumbs span {
+  font-size: 22px;
+  color: #5b4681;
 }
 
 .productsHeader {
@@ -83,6 +115,24 @@ nav {
   padding: 30px;
 }
 
+.description h1, h3, p {
+  color: #5b4681;
+}
+
+.description hr {
+  border: solid 1px #5b4681;
+}
+
+.models {
+  padding: 30px;
+}
+
+.model b, .model span {
+  color: #5b4681;
+}
+
+/* BUTTONS SECTION */
+
 .actions {
   padding: 30px;
 }
@@ -137,6 +187,14 @@ button a {
   .products {
     margin-left: 20px;
     grid-template-columns: repeat(2, minmax(300px, 1fr));
+  }
+
+  .details {
+    display: block;
+  }
+
+  button, .bought  {
+    width: 200px;
   }
 }
 

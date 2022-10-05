@@ -2,7 +2,7 @@ import React from "react";
 import productsData from "./productsData";
 import { Link } from "react-router-dom";
 
-const Products = () => {
+function Products() {
   const products = productsData.map(product => {
     return (
       <div className="product" key={product.id}>
@@ -13,6 +13,7 @@ const Products = () => {
               </h3>
               <img src={product.img} alt=""/>
             
+            <p>Brand: {product.brand}</p>
             <p>Price: ${product.price}</p>
           </div>
         </Link>
