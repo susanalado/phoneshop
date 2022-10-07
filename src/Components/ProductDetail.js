@@ -9,17 +9,28 @@ function ProductDetail(props) {
     const [thisProduct, setProduct] = useState({});
 
     useEffect(() => {
-        fetch(`/api/product/${productId}`)
-            .then((response) => response.json())
-            .then((data) => {
-                setProduct(data);
-                setImgSrc(data.imgUrl);
-                setModelValue(data.options.colors[0].code);
-                setMemoryValue(data.options.storages[0].code);
-            })
-            .catch((err) => {
-                console.log(err.message);
-            });
+        if (window.localStorage !== undefined){ 
+            const productDetails = JSON.parse(window.localStorage.getItem(`productDetails${productId}`));
+            if (productDetails !== null) {
+                setProduct(productDetails);
+                setImgSrc(productDetails.imgUrl);
+                setModelValue(productDetails.options.colors[0].code);
+                setMemoryValue(productDetails.options.storages[0].code);
+            } else {
+                fetch(`/api/product/${productId}`)
+                    .then((response) => response.json())
+                    .then((data) => {
+                        localStorage.setItem(`productDetails${productId}`, JSON.stringify(data));
+                        setProduct(data);
+                        setImgSrc(data.imgUrl);
+                        setModelValue(data.options.colors[0].code);
+                        setMemoryValue(data.options.storages[0].code);
+                    })
+                    .catch((err) => {
+                        console.log(err.message);
+                    })
+                }
+            }
     }, [productId]);
 
     //Hooks to set state
@@ -65,7 +76,7 @@ function ProductDetail(props) {
 
     const handleBuy = () => {
         const phone ={
-            id: 1,//thisProduct.id,
+            id: thisProduct.id,
             colorCode: valueKey,
             storageCode: memoryKey
         }
@@ -82,6 +93,7 @@ function ProductDetail(props) {
         })
     };
 
+    // Dynamically add paragraph with phone attributes if they're not empty
     const productAttribute = (atributeName, atribute) => {
         if (atribute !== undefined) 
         return <p><b>{atributeName}:</b> {atribute}</p>
