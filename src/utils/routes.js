@@ -1,6 +1,5 @@
-import App from "./App";
-import ProductDetail from "./ProductDetail";
-
+import App from "../App";
+import ProductDetail from "../Components/ProductDetail";
 
 export default [
     { path: "/", name: "", Component: App },

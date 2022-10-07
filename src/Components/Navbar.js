@@ -2,10 +2,10 @@ import React from "react";
 import { Link, Route, Switch, BrowserRouter as Router  } from "react-router-dom";
 import Products from "./Products";
 import ProductDetail from "./ProductDetail";
-import routes from "./routes";
+import routes from "../utils/routes";
 import Breadcrumbs from "./Breadcrumbs";
 
-const Navbar = ({ cart, addToCart }) => (
+const Navbar = ({ addToCart }) => (
 
   (<Router>
           {routes.map(({ path }, key) => (
@@ -45,7 +45,6 @@ const Navbar = ({ cart, addToCart }) => (
                     </Route>
                     <Route path="/products/:productId">
                       <ProductDetail
-                      cart={cart} 
                       addToCart={addToCart}
                        />
                     </Route>

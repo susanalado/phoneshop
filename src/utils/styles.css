@@ -18,27 +18,33 @@ nav a {
 }
 
 nav {
-  padding: 30px;
+  padding: 5px 30px 5px 30px;;
   width: 100vw;
   display: flex;
 }
 
-.cart {
-  padding: 30px;
-}
-
-.cart-icon {
-  position: relative;
-  float: right;
-  margin-right: 20px;
-  cursor: pointer;
+.cart-img {
+  width: 30px;
+  position: absolute;
+  right: 0;
+  z-index: 1;
+  top: 30px;
+  margin: -10px 50px 10px 0;
 }
 
 .cart-value {
   position: absolute;
-  right: 0;
-  top: 30px;
-  width: 50px;
+  right: 30px;
+  top: 14px;
+  padding: 1px 1px 2px 7px;
+  border-radius: 300px;
+  background: #755aa6;
+  width: auto;
+  min-width: 14px;
+}
+
+.cart-value div {
+  color: white;
 }
 
 .breadcrumbs {
@@ -53,10 +59,11 @@ nav {
 .productsHeader {
   display: flex;
   margin-left: 30px;
+  height: 80px;
 }
-.product{
+.product {
   padding: 30px;
-  background-color: #F5F5F6;
+  background-color: white;
 }
 .productCard {
   min-width: fit-content;
@@ -70,9 +77,10 @@ nav {
   color: black;
   text-decoration: none;
 }
+
 .products {
   max-width: 1200px;
-  margin: 0 auto;
+  margin: 100px auto 0 auto;
   display: grid;
   gap: 3rem;
   grid-template-columns: repeat(4, minmax(300px, 1fr));
@@ -90,20 +98,41 @@ nav {
   height: auto;
   max-width: 250px;
   max-height: 300px;
+
+  margin: 0 40px 0 40px;
 }
 
 .searchbar {
-  margin-top: 25px;
+  width: 400px!important;
+  position: absolute!important;
+  margin-top: 30px!important;
+  margin-bottom: 200px!important;
+  float: right;
+  right: 3em;
+}
+
+@media (min-width: 1436px) {
+  .searchbar {
+    width: 400px!important;
+    position: absolute!important;
+    margin-top: 30px!important;
+    margin-bottom: 200px!important;
+    float: right;
+    right: 3em;
+  }
 }
 
 .details {
-  background-color: #F5F5F6;
-  align-items: center;
+  background-color: white;
   margin-left: 20vw;
   padding: 30px;
   display: flex;
   margin: 30px auto;
   max-width: 1000px;
+}
+
+.miniature {
+  margin-top: 50px;
 }
 
 .miniature img{
@@ -120,6 +149,7 @@ nav {
 }
 
 .description hr {
+  background: #5b4681;
   border: solid 1px #5b4681;
 }
 
