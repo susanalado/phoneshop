@@ -1,9 +1,11 @@
 import React from 'react';
 import Navbar from "./Components/Navbar";
-import {Text} from 'react-native'
+import { Text } from 'react-native';
+import cartImg from "./utils/img/cart.png"; 
 
 function App (){    
   let [cartCount, setCartCount] = React.useState( () => {
+    // Persist cart items count
     if (window.localStorage !== undefined){ 
       const cartCount = window.localStorage.getItem('cartCount');
       if (cartCount !== null) 
@@ -13,6 +15,7 @@ function App (){
   }});
 
   const addToCart = (count) => {
+    // Update cart items count with the API returned value
     localStorage.setItem('cartCount', count)
     setCartCount(count);
   }
@@ -33,7 +36,7 @@ function App (){
     <div>
       <Navbar
       addToCart={addToCart}/>
-        <img className="cart-img" src={require("./utils/img/cart.png")} alt="Cart"/>
+        <img className="cart-img" src={cartImg} alt="Cart"/>
         <div className="cart-value">
           <Text>{cartCount}</Text>
         </div>
