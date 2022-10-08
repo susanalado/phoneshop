@@ -4,7 +4,7 @@
 
 1. START - Modo desarrollo
 
-`npm start`~
+`npm start`
 
 2. BUILD - Compilación para modo Producción
 
